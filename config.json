@@ -1,0 +1,6 @@
+{
+  "paths": {
+    "glyphs": "https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf"
+  },
+  "styles": { "coastlines_style": { "style": "styles.json" } }
+}
