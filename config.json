@@ -1,6 +1,33 @@
 {
-  "paths": {
-    "glyphs": "https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf"
+  "options": {
+    "domains": [
+      "prod.digitalearthpacific.org",
+      "localhost:8080",
+      "127.0.0.1:8080"
+    ],
+    "formatQuality": {
+      "jpeg": 80,
+      "webp": 90
+    },
+    "maxScaleFactor": 3,
+    "maxSize": 2048,
+    "pbfAlias": "pbf",
+    "serveAllFonts": false,
+    "serveAllStyles": false,
+    "serveStaticMaps": true,
+    "allowRemoteMarkerIcons": true,
+    "allowInlineMarkerImages": true,
+    "staticAttributionText": "© Digital Earth Pacific",
+    "tileMargin": 0
   },
-  "styles": { "coastlines_style": { "style": "styles.json" } }
+  "styles": {
+    "coastlines": {
+      "style": "styles.json"
+    }
+  },
+  "data": {
+    "coastlines": {
+      "pmtiles": "https://deppcpublicstorage.blob.core.windows.net/output/dep_ls_coastlines/dep_ls_coastlines_0-7-0-54.pmtiles"
+    }
+  }
 }

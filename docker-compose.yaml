@@ -1,0 +1,11 @@
+services:
+  tileserver:
+    image: maptiler/tileserver-gl
+    volumes:
+      - ./config.json:/data/config.json
+      - ./styles.json:/data/styles.json
+    ports:
+      - 8080:8080
+    command:
+      - "--config"
+      - "/data/config.json"

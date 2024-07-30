@@ -5,7 +5,7 @@
   "sources": {
     "coastlines": {
       "type": "vector",
-      "url": "pmtiles://dep_ls_coastlines_0-7-0-53.pmtiles"
+      "url": "pmtiles://coastlines"
     }
   },
   "layers": [
@@ -19,8 +19,13 @@
       "paint": {
         "line-color": [
           "interpolate",
-          ["linear"],
-          ["get", "year"],
+          [
+            "linear"
+          ],
+          [
+            "get",
+            "year"
+          ],
           1999,
           "#000004",
           2003,
@@ -34,8 +39,26 @@
           2023,
           "#fcffa4"
         ],
-        "line-width": ["match", ["get", "certainty"], "good", 2.5, 0.85],
-        "line-opacity": ["match", ["get", "certainty"], "good", 1, 0.65]
+        "line-width": [
+          "match",
+          [
+            "get",
+            "certainty"
+          ],
+          "good",
+          2.5,
+          0.85
+        ],
+        "line-opacity": [
+          "match",
+          [
+            "get",
+            "certainty"
+          ],
+          "good",
+          1,
+          0.65
+        ]
       }
     },
     {
@@ -63,11 +86,26 @@
       "maxzoom": 13,
       "source": "coastlines",
       "source-layer": "rates_of_change",
-      "filter": ["all", ["<=", "sig_time", 0.01], ["==", "certainty", "good"]],
+      "filter": [
+        "all",
+        [
+          "<=",
+          "sig_time",
+          0.01
+        ],
+        [
+          "==",
+          "certainty",
+          "good"
+        ]
+      ],
       "paint": {
         "circle-color": [
           "step",
-          ["get", "rate_time"],
+          [
+            "get",
+            "rate_time"
+          ],
           "#ca0020",
           -5,
           "#da3c43",
@@ -96,7 +134,10 @@
         ],
         "circle-radius": [
           "step",
-          ["get", "rate_time"],
+          [
+            "get",
+            "rate_time"
+          ],
           8,
           -5,
           7,
@@ -132,20 +173,48 @@
       "maxzoom": 13,
       "source": "coastlines",
       "source-layer": "rates_of_change",
-      "filter": ["all", ["<=", "sig_time", 0.01], ["==", "certainty", "good"]],
+      "filter": [
+        "all",
+        [
+          "<=",
+          "sig_time",
+          0.01
+        ],
+        [
+          "==",
+          "certainty",
+          "good"
+        ]
+      ],
       "layout": {
         "text-field": [
           "concat",
           [
             "number-format",
-            ["get", "rate_time"],
-            { "min-fraction-digits": 1, "max-fraction-digits": 1 }
+            [
+              "get",
+              "rate_time"
+            ],
+            {
+              "min-fraction-digits": 1,
+              "max-fraction-digits": 1
+            }
           ],
           "m, (±",
           [
             "number-format",
-            ["*", ["get", "se_time"], 1.96],
-            { "min-fraction-digits": 1, "max-fraction-digits": 1 }
+            [
+              "*",
+              [
+                "get",
+                "se_time"
+              ],
+              1.96
+            ],
+            {
+              "min-fraction-digits": 1,
+              "max-fraction-digits": 1
+            }
           ],
           ")"
         ],
@@ -165,11 +234,26 @@
       "maxzoom": 10,
       "source": "coastlines",
       "source-layer": "hotspots_zoom_3",
-      "filter": ["all", ["<=", "sig_time", 0.01], ["==", "certainty", "good"]],
+      "filter": [
+        "all",
+        [
+          "<=",
+          "sig_time",
+          0.01
+        ],
+        [
+          "==",
+          "certainty",
+          "good"
+        ]
+      ],
       "paint": {
         "circle-color": [
           "step",
-          ["get", "rate_time"],
+          [
+            "get",
+            "rate_time"
+          ],
           "#ca0020",
           -5,
           "#da3c43",
@@ -198,7 +282,10 @@
         ],
         "circle-radius": [
           "step",
-          ["get", "rate_time"],
+          [
+            "get",
+            "rate_time"
+          ],
           8,
           -5,
           7,
@@ -234,11 +321,26 @@
       "maxzoom": 7,
       "source": "coastlines",
       "source-layer": "hotspots_zoom_2",
-      "filter": ["all", ["<=", "sig_time", 0.01], ["==", "certainty", "good"]],
+      "filter": [
+        "all",
+        [
+          "<=",
+          "sig_time",
+          0.01
+        ],
+        [
+          "==",
+          "certainty",
+          "good"
+        ]
+      ],
       "paint": {
         "circle-color": [
           "step",
-          ["get", "rate_time"],
+          [
+            "get",
+            "rate_time"
+          ],
           "#ca0020",
           -5,
           "#da3c43",
@@ -267,7 +369,10 @@
         ],
         "circle-radius": [
           "step",
-          ["get", "rate_time"],
+          [
+            "get",
+            "rate_time"
+          ],
           8,
           -5,
           7,
@@ -303,11 +408,26 @@
       "maxzoom": 4,
       "source": "coastlines",
       "source-layer": "hotspots_zoom_1",
-      "filter": ["all", ["<=", "sig_time", 0.01], ["==", "certainty", "good"]],
+      "filter": [
+        "all",
+        [
+          "<=",
+          "sig_time",
+          0.01
+        ],
+        [
+          "==",
+          "certainty",
+          "good"
+        ]
+      ],
       "paint": {
         "circle-color": [
           "step",
-          ["get", "rate_time"],
+          [
+            "get",
+            "rate_time"
+          ],
           "#ca0020",
           -5,
           "#da3c43",
@@ -336,7 +456,10 @@
         ],
         "circle-radius": [
           "step",
-          ["get", "rate_time"],
+          [
+            "get",
+            "rate_time"
+          ],
           8,
           -5,
           7,
