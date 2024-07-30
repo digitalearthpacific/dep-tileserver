@@ -1,9 +1,7 @@
 {
   "options": {
     "domains": [
-      "tileserver.prod.digitalearthpacific.io",
-      "localhost:8080",
-      "127.0.0.1:8080"
+      "tileserver.prod.digitalearthpacific.io"
     ],
     "formatQuality": {
       "jpeg": 80,
