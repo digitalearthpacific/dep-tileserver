@@ -1,7 +1,7 @@
 {
   "options": {
     "domains": [
-      "prod.digitalearthpacific.org",
+      "tileserver.prod.digitalearthpacific.io",
       "localhost:8080",
       "127.0.0.1:8080"
     ],
@@ -27,7 +27,7 @@
   },
   "data": {
     "coastlines": {
-      "pmtiles": "https://deppcpublicstorage.blob.core.windows.net/output/dep_ls_coastlines/dep_ls_coastlines_0-7-0-54.pmtiles"
+      "pmtiles": "https://dep-public-prod.s3.us-west-2.amazonaws.com/dep_ls_coastlines/dep_ls_coastlines_0-7-0-54.pmtiles"
     }
   }
 }
