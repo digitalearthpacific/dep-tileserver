@@ -1,8 +1,5 @@
 {
   "options": {
-    "domains": [
-      "tileserver.prod.digitalearthpacific.io"
-    ],
     "formatQuality": {
       "jpeg": 80,
       "webp": 90
