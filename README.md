@@ -1,2 +1,3 @@
-# dep-tileserver
-Tileserver config for serving coastlines
+# DEP Tileserver
+
+Tileserver config for serving coastlines visualisations.
