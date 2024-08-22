@@ -10,72 +10,18 @@
   },
   "layers": [
     {
-      "id": "Annual shorelines",
-      "type": "line",
-      "minzoom": 13,
-      "maxzoom": 22,
-      "source": "coastlines",
-      "source-layer": "shorelines_annual",
-      "filter": [
-        "all",
-        [
-          "==",
-          "certainty",
-          "good"
-        ]
-      ],
-      "paint": {
-        "line-color": [
-          "interpolate",
-          [
-            "linear"
-          ],
-          [
-            "get",
-            "year"
-          ],
-          1999,
-          "#000004",
-          2003,
-          "#2f0a5b",
-          2007,
-          "#801f6c",
-          2012,
-          "#d34743",
-          2017,
-          "#fb9d07",
-          2023,
-          "#fcffa4"
-        ],
-        "line-width": 2.5,
-        "line-opacity": 1
-      }
-    },
-    {
       "id": "Annual shorelines (uncertain)",
       "type": "line",
       "minzoom": 13,
       "maxzoom": 22,
       "source": "coastlines",
       "source-layer": "shorelines_annual",
-      "filter": [
-        "all",
-        [
-          "!=",
-          "certainty",
-          "good"
-        ]
-      ],
+      "filter": ["all", ["!=", "certainty", "good"]],
       "paint": {
         "line-color": [
           "interpolate",
-          [
-            "linear"
-          ],
-          [
-            "get",
-            "year"
-          ],
+          ["linear"],
+          ["get", "year"],
           1999,
           "#000004",
           2003,
@@ -91,10 +37,37 @@
         ],
         "line-width": 2.0,
         "line-opacity": 0.8,
-        "line-dasharray": [
-          4,
-          4
-        ]
+        "line-dasharray": [4, 4]
+      }
+    },
+    {
+      "id": "Annual shorelines",
+      "type": "line",
+      "minzoom": 13,
+      "maxzoom": 22,
+      "source": "coastlines",
+      "source-layer": "shorelines_annual",
+      "filter": ["all", ["==", "certainty", "good"]],
+      "paint": {
+        "line-color": [
+          "interpolate",
+          ["linear"],
+          ["get", "year"],
+          1999,
+          "#000004",
+          2003,
+          "#2f0a5b",
+          2007,
+          "#801f6c",
+          2012,
+          "#d34743",
+          2017,
+          "#fb9d07",
+          2023,
+          "#fcffa4"
+        ],
+        "line-width": 2.5,
+        "line-opacity": 1
       }
     },
     {
@@ -122,26 +95,11 @@
       "maxzoom": 13,
       "source": "coastlines",
       "source-layer": "rates_of_change",
-      "filter": [
-        "all",
-        [
-          "<=",
-          "sig_time",
-          0.01
-        ],
-        [
-          "==",
-          "certainty",
-          "good"
-        ]
-      ],
+      "filter": ["all", ["<=", "sig_time", 0.01], ["==", "certainty", "good"]],
       "paint": {
         "circle-color": [
           "step",
-          [
-            "get",
-            "rate_time"
-          ],
+          ["get", "rate_time"],
           "#ca0020",
           -5,
           "#da3c43",
@@ -170,10 +128,7 @@
         ],
         "circle-radius": [
           "step",
-          [
-            "get",
-            "rate_time"
-          ],
+          ["get", "rate_time"],
           8,
           -5,
           7,
@@ -209,28 +164,13 @@
       "maxzoom": 13,
       "source": "coastlines",
       "source-layer": "rates_of_change",
-      "filter": [
-        "all",
-        [
-          "<=",
-          "sig_time",
-          0.01
-        ],
-        [
-          "==",
-          "certainty",
-          "good"
-        ]
-      ],
+      "filter": ["all", ["<=", "sig_time", 0.01], ["==", "certainty", "good"]],
       "layout": {
         "text-field": [
           "concat",
           [
             "number-format",
-            [
-              "get",
-              "rate_time"
-            ],
+            ["get", "rate_time"],
             {
               "min-fraction-digits": 1,
               "max-fraction-digits": 1
@@ -239,14 +179,7 @@
           "m, (±",
           [
             "number-format",
-            [
-              "*",
-              [
-                "get",
-                "se_time"
-              ],
-              1.96
-            ],
+            ["*", ["get", "se_time"], 1.96],
             {
               "min-fraction-digits": 1,
               "max-fraction-digits": 1
@@ -270,26 +203,11 @@
       "maxzoom": 10,
       "source": "coastlines",
       "source-layer": "hotspots_zoom_3",
-      "filter": [
-        "all",
-        [
-          "<=",
-          "sig_time",
-          0.01
-        ],
-        [
-          "==",
-          "certainty",
-          "good"
-        ]
-      ],
+      "filter": ["all", ["<=", "sig_time", 0.01], ["==", "certainty", "good"]],
       "paint": {
         "circle-color": [
           "step",
-          [
-            "get",
-            "rate_time"
-          ],
+          ["get", "rate_time"],
           "#ca0020",
           -5,
           "#da3c43",
@@ -318,10 +236,7 @@
         ],
         "circle-radius": [
           "step",
-          [
-            "get",
-            "rate_time"
-          ],
+          ["get", "rate_time"],
           8,
           -5,
           7,
@@ -357,26 +272,11 @@
       "maxzoom": 7,
       "source": "coastlines",
       "source-layer": "hotspots_zoom_2",
-      "filter": [
-        "all",
-        [
-          "<=",
-          "sig_time",
-          0.01
-        ],
-        [
-          "==",
-          "certainty",
-          "good"
-        ]
-      ],
+      "filter": ["all", ["<=", "sig_time", 0.01], ["==", "certainty", "good"]],
       "paint": {
         "circle-color": [
           "step",
-          [
-            "get",
-            "rate_time"
-          ],
+          ["get", "rate_time"],
           "#ca0020",
           -5,
           "#da3c43",
@@ -405,10 +305,7 @@
         ],
         "circle-radius": [
           "step",
-          [
-            "get",
-            "rate_time"
-          ],
+          ["get", "rate_time"],
           8,
           -5,
           7,
@@ -444,26 +341,11 @@
       "maxzoom": 4,
       "source": "coastlines",
       "source-layer": "hotspots_zoom_1",
-      "filter": [
-        "all",
-        [
-          "<=",
-          "sig_time",
-          0.01
-        ],
-        [
-          "==",
-          "certainty",
-          "good"
-        ]
-      ],
+      "filter": ["all", ["<=", "sig_time", 0.01], ["==", "certainty", "good"]],
       "paint": {
         "circle-color": [
           "step",
-          [
-            "get",
-            "rate_time"
-          ],
+          ["get", "rate_time"],
           "#ca0020",
           -5,
           "#da3c43",
@@ -492,10 +374,7 @@
         ],
         "circle-radius": [
           "step",
-          [
-            "get",
-            "rate_time"
-          ],
+          ["get", "rate_time"],
           8,
           -5,
           7,
@@ -526,3 +405,4 @@
     }
   ]
 }
+
