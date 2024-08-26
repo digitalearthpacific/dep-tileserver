@@ -16,7 +16,7 @@
       "maxzoom": 22,
       "source": "coastlines",
       "source-layer": "shorelines_annual",
-      "filter": ["all", ["!=", "certainty", "good"]],
+      "filter": ["!=", "certainty", "good"],
       "paint": {
         "line-color": [
           "interpolate",
@@ -47,7 +47,7 @@
       "maxzoom": 22,
       "source": "coastlines",
       "source-layer": "shorelines_annual",
-      "filter": ["all", ["==", "certainty", "good"]],
+      "filter": ["==", "certainty", "good"],
       "paint": {
         "line-color": [
           "interpolate",
@@ -405,4 +405,3 @@
     }
   ]
 }
-
