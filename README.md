@@ -1,3 +1,3 @@
 # DEP Tileserver
 
-Tileserver config for serving coastlines visualisations.
+Tileserver-gl config for serving coastlines visualisations.
