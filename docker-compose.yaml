@@ -4,6 +4,9 @@ services:
     volumes:
       - ./config.json:/data/config.json
       - ./styles.json:/data/styles.json
+      - ./shorelines_annual_style.json:/data/shorelines_annual_style.json
+      - ./roc_style.json:/data/roc_style.json
+      - ./buildings_style.json:/data/buildings_style.json
     ports:
       - 8080:8080
     command:

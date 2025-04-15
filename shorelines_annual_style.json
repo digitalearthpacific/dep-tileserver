@@ -1,0 +1,74 @@
+{
+  "version": 8,
+  "name": "Digital Earth Pacific Annual Shorelines",
+  "glyphs": "https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf",
+  "sources": {
+    "coastlines": {
+      "type": "vector",
+      "url": "pmtiles://coastlines"
+    }
+  },
+  "layers": [
+    {
+      "id": "Annual shorelines (uncertain)",
+      "type": "line",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "source": "coastlines",
+      "source-layer": "shorelines_annual",
+      "filter": ["!=", "certainty", "good"],
+      "paint": {
+        "line-color": [
+          "interpolate",
+          ["linear"],
+          ["get", "year"],
+          1999,
+          "#000004",
+          2003,
+          "#2f0a5b",
+          2007,
+          "#801f6c",
+          2012,
+          "#d34743",
+          2017,
+          "#fb9d07",
+          2023,
+          "#fcffa4"
+        ],
+        "line-width": 2.0,
+        "line-opacity": 0.8,
+        "line-dasharray": [4, 4]
+      }
+    },
+    {
+      "id": "Annual shorelines",
+      "type": "line",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "source": "coastlines",
+      "source-layer": "shorelines_annual",
+      "filter": ["==", "certainty", "good"],
+      "paint": {
+        "line-color": [
+          "interpolate",
+          ["linear"],
+          ["get", "year"],
+          1999,
+          "#000004",
+          2003,
+          "#2f0a5b",
+          2007,
+          "#801f6c",
+          2012,
+          "#d34743",
+          2017,
+          "#fb9d07",
+          2023,
+          "#fcffa4"
+        ],
+        "line-width": 2.5,
+        "line-opacity": 1
+      }
+    }
+  ]
+}

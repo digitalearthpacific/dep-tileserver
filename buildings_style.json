@@ -1,0 +1,26 @@
+{
+  "version": 8,
+  "name": "Digital Earth Pacific Buildings",
+  "glyphs": "https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf",
+  "sources": {
+    "buildings": {
+      "type": "vector",
+      "url": "pmtiles://buildings"
+    }
+  },
+  "layers": [
+    {
+      "id": "Buildings",
+      "type": "fill",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "source": "buildings",
+      "source-layer": "buildings",
+      "paint": {
+        "fill-color": "#eb8730",
+        "fill-outline-color": "#4e4e4e",
+        "fill-opacity": 0.8
+      }
+    }
+  ]
+}
