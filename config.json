@@ -34,7 +34,7 @@
       "pmtiles": "https://dep-public-prod.s3.us-west-2.amazonaws.com/dep_ls_coastlines/dep_ls_coastlines_0-7-0-54.pmtiles"
     },
     "buildings": {
-      "pmtiles": "https://dep-public-staging.s3.us-west-2.amazonaws.com/dep_osm_buildings/dep_buildings_0-1-0.pmtiles"
+      "pmtiles": "https://dep-public-staging.s3.us-west-2.amazonaws.com/dep_osm_buildings/dep_buildings_0-1-1.pmtiles"
     }
   }
 }
