@@ -37,7 +37,7 @@
       "pmtiles": "https://dep-public-staging.s3.us-west-2.amazonaws.com/dep_osm_buildings/dep_buildings_0-1-1.pmtiles"
     },
     "dashboard-hotspot-stats": {
-      "pmtiles": "https://dep-public-staging.s3.us-west-2.amazonaws.com/dep_ls_coastlines/dashboard_stats/0-0-1/contiguous_hotspots.pmtiles"
+      "pmtiles": "https://dep-public-staging.s3.us-west-2.amazonaws.com/dep_ls_coastlines/dashboard_stats/0-0-2/contiguous_hotspots.pmtiles"
     }
   }
 }
